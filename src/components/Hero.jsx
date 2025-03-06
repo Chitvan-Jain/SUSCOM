@@ -5,61 +5,56 @@ import Journal from "../assets/images/journal.jpg";
 
 const Hero = () => {
   return (
-    <div className="min-h-screen bg-white relative flex flex-col items-center justify-center text-center px-6 py-12">
+    <div className="h-[calc(100vh-80px)] mt-20 bg-white relative flex flex-col items-center justify-center text-center px-6 py-10">
       {/* Content Container */}
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center">
         {/* Top Logo */}
-        <div className="flex justify-center mb-8">
-          <img src={Logo1} alt="Conference Logo" className="h-20 object-contain" />
+        <div className="mb-4">
+          <img src={Logo1} alt="Conference Logo" className="h-16 object-contain" />
         </div>
 
         {/* Conference Title */}
-        <h1 className="text-2xl md:text-3xl font-bold text-[#1e40af] mb-4">
+        <h1 className="text-xl md:text-2xl font-bold text-[#1e40af] mb-2 leading-tight">
           International Conference on Sustainable Computing (SUSCOM-2024)
         </h1>
 
         {/* Organizer Info */}
-        <p className="text-lg text-gray-700 mb-1">Organized by</p>
-        <p className="text-xl font-semibold text-gray-800 mb-1">Department of Computer Science</p>
-        <p className="text-xl font-semibold text-gray-800 mb-4">
-          Science and Technology University, UK
+        <p className="text-sm text-gray-700">Organized by</p>
+        <p className="text-lg font-semibold text-gray-800">Sri Balaji College of Engineering & Technology, Jaipur</p>
+        <p className="text-lg font-semibold text-gray-800 mb-2">
+        Rajasthan, India
         </p>
 
         {/* Date */}
-        <p className="text-xl font-bold text-gray-900 mb-8">October 18 - 20, 2024</p>
+        <p className="text-lg font-bold text-gray-900 mb-4">June 18 - 20, 2024</p>
 
-        {/* Sponsored by */}
-        <p className="text-lg text-gray-700 mb-1">Sponsored by</p>
-        <p className="text-xl font-semibold text-gray-800 mb-1">Department of Science & Innovation</p>
-        <p className="text-xl font-semibold text-gray-800 mb-8">
+        {/* Sponsors */}
+        <p className="text-sm text-gray-700">Sponsored by</p>
+        <p className="text-lg font-semibold text-gray-800">Department of Science & Innovation</p>
+        <p className="text-lg font-semibold text-gray-800 mb-4">
           Engineering and Research Council, UK
         </p>
 
         {/* Partners Section */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Publication Partners */}
+        <div className="grid grid-cols-2 gap-6 mt-2 w-full max-w-md">
+          {/* Publication Partner */}
           <div className="flex flex-col items-center">
-            <div className="flex gap-6 items-center justify-center mb-2">
-              <div className="text-center">
-                <img src={Scopus} alt="Springer" className="h-24 object-contain mb-2" />
-                <span className="text-[#1e40af] font-bold text-xl">Springer</span>
-              </div>
-            </div>
-            <p className="text-lg font-bold text-gray-700 uppercase">Publication Partner</p>
+            <img src={Scopus} alt="Springer" className="h-14 object-contain mb-1" />
+            <p className="text-sm font-bold text-gray-700 uppercase">Publication Partner</p>
           </div>
 
           {/* Proceedings Publication */}
           <div className="flex flex-col items-center">
-            <img src={Journal} alt="Proceedings Publication" className="h-36 object-contain mb-2" />
-            <p className="text-lg font-bold text-gray-700 uppercase">Proceedings Publication</p>
+            <img src={Journal} alt="Proceedings Publication" className="h-14 object-contain mb-1" />
+            <p className="text-sm font-bold text-gray-700 uppercase">Proceedings Publication</p>
           </div>
         </div>
 
         {/* Academic Partners */}
-        <div className="mt-12">
-          <p className="text-lg font-bold text-gray-700 uppercase mb-4">Academic Partners</p>
-          <div className="flex flex-wrap justify-center gap-8">
-            <img src={Scopus} alt="Academic Partner 1" className="h-20 object-contain" />
+        <div className="mt-6">
+          <p className="text-sm font-bold text-gray-700 uppercase mb-2">Academic Partners</p>
+          <div className="flex justify-center">
+            <img src={Scopus} alt="Academic Partner 1" className="h-12 object-contain" />
           </div>
         </div>
       </div>

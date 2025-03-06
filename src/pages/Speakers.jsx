@@ -1,5 +1,7 @@
 import React from "react";
-import { Linkedin, GraduationCap } from "lucide-react"; // Importing icons
+import { Linkedin, GraduationCap } from "lucide-react"; 
+import DrMohammadSKhan from "../assets/images/DrMohammadSKhan.png";
+import ProfDrMarioJoseDivan from "../assets/images/ProfDrMarioJoseDivan.png";
 
 const speakers = [
   {
@@ -12,7 +14,7 @@ const speakers = [
       He currently serves as an associate editor of IEEE Access, IET ITS, IET WSS, Springer's Telecommunication Systems, and Neural Computing and Applications. 
       He has been on technical program committees of various international conferences and technical reviewer of various international journals in his field. 
       He is a senior member of IEEE.`,
-    image: "/src/assets/images/DrMohammadSKhan.png",
+    image: DrMohammadSKhan,
     linkedin: "https://www.linkedin.com/in/mohammad-s-khan-ph-d-4115a0117/",
     scholar: "https://scholar.google.com/citations?user=ERBiTbwAAAAJ&hl=en",
   },
@@ -24,7 +26,7 @@ const speakers = [
       while he holds a specialty in managerial engineering from the NTU (Argentina) in 2004, a specialty in data mining and knowledge discovery in databases from the University of Buenos Aires (Argentina) in 2007, 
       and a specialty on high-performance and grid computing from the National University of La Plata - NULP (Argentina) in 2011. He obtained his Ph.D. in Computer Science in 2012 from the NULP (Argentina). 
       His interest areas lie in data science, data stream, stream mining, high-performance computing, big data, Internet-of-Things, and measurement.`,
-    image: "/src/assets/images/ProfDrMarioJoseDivan.png",
+    image: ProfDrMarioJoseDivan,
     linkedin: "https://www.linkedin.com/in/mjdivan/",
     scholar: "https://scholar.google.com.ar/citations?user=EplVzHwAAAAJ&hl=es",
   },
