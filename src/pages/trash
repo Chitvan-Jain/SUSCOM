@@ -1,5 +1,3 @@
-import React from 'react';
-
 const committeeMembers = [
   {
     role: 'Patron(s)',
@@ -76,26 +74,3 @@ const committeeMembers = [
     ],
   },
 ];
-
-const Committee = () => {
-  return (
-    <div className="container mx-auto py-12 px-6 pt-[120px]">
-      <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">Committee Members</h2>
-      {committeeMembers.map((section, index) => (
-        <div key={index} className="mb-8">
-          <h3 className="text-2xl font-semibold text-blue-900 mb-4">{section.role}</h3>
-          <div className="space-y-3">
-            {section.members.map((member, idx) => (
-              <div key={idx} className="p-4 border border-blue-200 rounded-lg shadow-md bg-white">
-                <p className="text-lg font-medium text-gray-800">{member.name}</p>
-                {member.affiliation && <p className="text-gray-600 text-sm">{member.affiliation}</p>}
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default Committee;

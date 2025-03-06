@@ -2,7 +2,7 @@ import React from "react";
 import logo from '../assets/images/CollegeLogo.png';
 const Footer = () => {
   return (
-    <footer className="bg-[#002855] text-white py-8">
+    <footer className="bg-[#002855] text-white py-8 px-20">
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between">
         {/* Contact Information */}
         <div className="md:w-1/3 mb-6 md:mb-0">
@@ -34,7 +34,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className=" text-sm mt-6 border-t border-gray-500 pt-4">
-      <span className="ml-20">Copyright © SUSCOM 2025. All Rights Reserved</span>
+      <span className="ml-5">Copyright © SUSCOM 2025. All Rights Reserved</span>
       </div>
     </footer>
   );
