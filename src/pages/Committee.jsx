@@ -79,8 +79,9 @@ const committeeMembers = [
 
 const Committee = () => {
   return (
-    <div className="container mx-auto py-12 px-6 pt-[120px]">
-      <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">Committee Members</h2>
+    <div className="container mx-auto py-12 px-52 pt-24">
+      <p className="text-4xl font-bold text-blue-900 text-center">Committee</p>
+      <div className="w-16 h-1 bg-blue-900 mx-auto mt-2 mb-8"></div>
       {committeeMembers.map((section, index) => (
         <div key={index} className="mb-8">
           <h3 className="text-2xl font-semibold text-blue-900 mb-4">{section.role}</h3>

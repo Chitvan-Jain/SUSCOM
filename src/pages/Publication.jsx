@@ -35,9 +35,9 @@ const publications = [
 
 const Publication = () => {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12 pt-[120px]">
+    <div className="mx-auto px-52 py-12 pt-[120px]">
       {/* Title */}
-      <h2 className="text-3xl font-bold text-blue-900 text-center">Publications</h2>
+      <p className="text-4xl font-bold text-blue-900 text-center">Publications</p>
       <div className="w-16 h-1 bg-blue-900 mx-auto mt-2 mb-8"></div>
 
       <p className="text-gray-700 text-center mb-8">

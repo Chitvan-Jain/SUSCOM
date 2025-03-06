@@ -15,12 +15,12 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4">
           {[
             { name: "Home", path: "/" },
-            { name: "Archive", path: "/archive" },
+            { name: "Speakers", path: "/speakers" },
             { name: "Call For Paper", path: "/call-for-paper" },
-            { name: "Committee", path: "/committee" },
             { name: "Publication", path: "/publication" },
             { name: "Registration", path: "/registration" },
-            { name: "Speakers", path: "/speakers" },
+            { name: "Committee", path: "/committee" },
+            { name: "Archive", path: "/archive" },
           ].map((link) => (
             <Link
               key={link.name}

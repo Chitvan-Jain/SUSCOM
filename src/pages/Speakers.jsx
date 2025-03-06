@@ -34,8 +34,9 @@ const speakers = [
 
 const Speaker = () => {
   return (
-    <div className="container mx-auto py-10 px-36 md:px-40 lg:px-20 pt-[100px]">
-      <h2 className="text-2xl font-semibold text-center mb-8 text-blue-900">Keynote/Guest Speakers</h2>
+    <div className="container mx-auto py-10 px-52 pt-[100px]">
+      <p className="text-4xl font-bold text-blue-900 text-center">Keynote/Guest Speakers</p>
+      <div className="w-24 h-1 bg-blue-900 mx-auto mt-2 mb-8"></div>
       <div className="grid md:grid-rows-1 gap-6">
         {speakers.map((speaker, index) => (
           <div key={index} className="flex flex-col md:flex-row items-start space-x-4 border-b pb-4">

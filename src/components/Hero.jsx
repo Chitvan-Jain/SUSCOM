@@ -5,7 +5,7 @@ import Journal from "../assets/images/journal.jpg";
 
 const Hero = () => {
   return (
-    <div className="h-[calc(100vh-80px)] mt-20 bg-white relative flex flex-col items-center justify-center text-center px-6 py-10">
+    <div className="h-[calc(100vh-80px)] mt-14 bg-white relative flex flex-col items-center justify-center text-center px-6 py-10">
       {/* Content Container */}
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center justify-center">
         {/* Top Logo */}
@@ -26,7 +26,7 @@ const Hero = () => {
         </p>
 
         {/* Date */}
-        <p className="text-lg font-bold text-gray-900 mb-4">June 18 - 20, 2024</p>
+        <p className="text-lg font-bold text-gray-900 mb-4">June 26 - 27, 2025</p>
 
         {/* Sponsors */}
         <p className="text-sm text-gray-700">Sponsored by</p>

@@ -42,7 +42,7 @@ const Home = () => {
 
       {/* Doctoral Symposium Section */}
       <div className="mt-12">
-        <h2 className="text-3xl font-bold text-blue-900">
+        <h2 className="text-3xl font-bold text-black">
           Doctoral <span className="text-blue-900">Symposium</span>
         </h2>
         <div className="w-20 border-b-4 border-blue-900 my-2"></div>

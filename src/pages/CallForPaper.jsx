@@ -100,9 +100,10 @@ const CallForPaper = () => {
   };
 
   return (
-    <div className="container mx-auto py-12 md:px-52 pt-[120px]">
+    <div className="container mx-auto py-12 px-52 pt-24">
       {/* Call for Papers Section */}
-      <h2 className="text-3xl font-bold text-blue-900">Call for Papers</h2>
+      <p className="text-4xl font-bold text-blue-900 text-center">Call for Paper</p>
+      <div className="w-16 h-1 bg-blue-900 mx-auto mt-2 mb-8"></div>
       <p className="text-gray-700 mt-2">
         The conference will focus on the social and economic impact of sustainable computing. Sub-topics covered in this section include applying AI
         to sustainability, benefits of sustainable computing, and the impact of cloud computing on sustainability. The conference will explore

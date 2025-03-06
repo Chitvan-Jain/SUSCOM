@@ -50,10 +50,10 @@ const conferenceData = [
 
 const Archive = () => {
   return (
-    <div className="mt-24 max-w-4xl mx-auto px-4">
+    <div className="mt-24 px-52 mx-auto">
       {/* Title */}
-      <h1 className="text-2xl font-semibold text-blue-900">Archive</h1>
-      <div className="w-16 h-1 bg-blue-900 mt-1 mb-4"></div>
+      <p className="text-4xl font-bold text-blue-900 text-center">Archive</p>
+      <div className="w-12 h-1 bg-blue-900 mx-auto mt-2 mb-8"></div>
       <p className="text-gray-700 text-sm mb-6">
         The details of previous international conference 'SUSCOM' are provided below.
       </p>
