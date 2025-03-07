@@ -1,8 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 import Logo from "../assets/images/Logo2.png";
 
 const Navbar = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const NavLink = ({ to, children, dropdown }) => (
+    <div
+      className="relative group"
+      onMouseEnter={() => dropdown && setActiveDropdown(dropdown)}
+      onMouseLeave={() => dropdown && setActiveDropdown(null)}
+    >
+      <Link
+        to={to}
+        className="relative text-black hover:text-blue-900 px-3 py-2 text-xs font-medium inline-flex items-center"
+      >
+        {children}
+        {dropdown && <ChevronDown className="ml-1 h-4 w-4" />}
+        <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-900 transition-all duration-300 group-hover:w-full"></span>
+      </Link>
+      {dropdown && (
+        <DropdownMenu isActive={activeDropdown === dropdown}>
+          {dropdowns[dropdown].items.map((item, index) => (
+            <DropdownItem key={index} to={item.to}>
+              {item.label}
+            </DropdownItem>
+          ))}
+        </DropdownMenu>
+      )}
+    </div>
+  );
+
+  const DropdownMenu = ({ isActive, children }) => (
+    <div
+      className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg transition-all duration-200 ${
+        isActive ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+      }`}
+      onMouseEnter={() => setActiveDropdown(activeDropdown)}
+      onMouseLeave={() => setActiveDropdown(null)}
+    >
+      <div className="py-2">{children}</div>
+    </div>
+  );
+
+  const DropdownItem = ({ to, children }) => (
+    <Link to={to} className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-900 transition-all">
+      {children}
+    </Link>
+  );
+
+  const dropdowns = {
+    paperSubmission: {
+      name: "Paper Submission",
+      items: [
+        { label: "Instruction for Authors", to: "/instructions" },
+        { label: "Call for Papers", to: "/call-for-papers" },
+        { label: "Important Dates", to: "/dates" },
+        { label: "Submission Form", to: "/form" },
+        { label: "Registration", to: "/registration" },
+        { label: "Publication", to: "/publication" },
+      ],
+    },
+    venue: {
+      name: "Venue",
+      items: [
+        { label: "Conference Venue", to: "/conference-venue" },
+        { label: "Transportation", to: "https://sbcet.sbss.ac.in/reach-sbcet/", external: true },
+        { label: "VISA", to: "/visa" },
+      ],
+    },
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-black shadow-md w-full">
       <div className="flex items-center mx-10 h-20 justify-between">
@@ -13,26 +82,19 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center space-x-4">
-          {[
-            { name: "Home", path: "/" },
-            { name: "Speakers", path: "/speakers" },
-            { name: "Call For Paper", path: "/call-for-paper" },
-            { name: "Publication", path: "/publication" },
-            { name: "Registration", path: "/registration" },
-            { name: "Committee", path: "/committee" },
-            { name: "Archive", path: "/archive" },
-          ].map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="relative text-black px-3 py-2 text-sm font-medium transition-all duration-300 
-                         hover:text-blue-900 after:content-[''] after:absolute after:left-0 after:bottom-0 
-                         after:w-0 after:h-[2px] after:bg-blue-900 after:transition-all after:duration-300 
-                         hover:after:w-full"
-            >
-              {link.name}
-            </Link>
-          ))}
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/speakers">Speakers</NavLink>
+          <NavLink to="/committee">Committee</NavLink>
+          <NavLink to="/archive">Archive</NavLink>
+          <NavLink to="/pre-workshop">Pre Workshop Conference</NavLink>
+          <NavLink to="/schedule">Conference Schedule</NavLink>
+          <NavLink to="/call-for-sponsors">Call for Sponsor</NavLink>
+          <NavLink to="#" dropdown="paperSubmission">
+          Paper Submission
+          </NavLink>
+          <NavLink to="#" dropdown="venue">
+            Venue
+          </NavLink>
         </div>
 
         {/* Contact Button */}

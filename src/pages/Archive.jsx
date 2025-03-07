@@ -9,6 +9,7 @@ const conferenceData = [
     rejected: 340,
     presented: 120,
     publicationDetails: "120 research papers were published in Scopus/ESCI/Web of Science Indexed journals SI.",
+    link:"https://scienceandtech.co.uk/conferences/suscom/2024/index.php"
   },
   {
     year: "2022",
@@ -18,6 +19,8 @@ const conferenceData = [
     rejected: 300,
     presented: 65,
     publicationDetails: "65 research papers were published in Scopus/ESCI/Web of Science Indexed T&F journals.",
+    link:"https://scienceandtech.co.uk/conferences/suscom/2022/index.php"
+
   },
   {
     year: "2021",
@@ -27,6 +30,8 @@ const conferenceData = [
     rejected: 275,
     presented: 70,
     publicationDetails: "75 research papers were published in Advances in Intelligent Systems and Computing (AISC) Springer.",
+    link:"https://scienceandtech.co.uk/conferences/suscom/2021/index.php"
+
   },
   {
     year: "2020",
@@ -36,6 +41,8 @@ const conferenceData = [
     rejected: 312,
     presented: 190,
     publicationDetails: "190 research papers were published in Scopus/ESCI/Web of Science Indexed T&F journals.",
+    link:"https://scienceandtech.co.uk/conferences/suscom/2020/index.php"
+
   },
   {
     year: "2019",
@@ -45,7 +52,9 @@ const conferenceData = [
     rejected: 497,
     presented: 310,
     publicationDetails: "SSRN-Elsevier Digital Library (https://hq.ssrn.com/conference=SUSCOM-2019)",
-  }
+    link:"https://scienceandtech.co.uk/conferences/suscom/2019/index.php"
+
+  },
 ];
 
 const Archive = () => {
@@ -54,9 +63,7 @@ const Archive = () => {
       {/* Title */}
       <p className="text-4xl font-bold text-blue-900 text-center">Archive</p>
       <div className="w-12 h-1 bg-blue-900 mx-auto mt-2 mb-8"></div>
-      <p className="text-gray-700 text-sm mb-6">
-        The details of previous international conference 'SUSCOM' are provided below.
-      </p>
+      <p className="text-gray-700 text-sm mb-6">The details of previous international conference 'SUSCOM' are provided below.</p>
 
       {/* Conference Data */}
       {conferenceData.map((conf) => (
@@ -92,14 +99,14 @@ const Archive = () => {
           </table>
 
           {/* Conference Publication Details */}
-          <p className="mt-2 text-gray-700 text-sm">
-            Conference Publication Details: {conf.publicationDetails}
-          </p>
+          <p className="mt-2 text-gray-700 text-sm">Conference Publication Details: {conf.publicationDetails}</p>
 
           {/* Button */}
-          <button className="mt-3 bg-blue-900 text-white text-sm font-medium px-4 py-1.5 rounded-md hover:bg-blue-800 transition duration-200">
-            SUSCOM-{conf.year}
-          </button>
+          <a href={conf.link} target="_blank" rel="noopener noreferrer">
+            <button className="mt-3 bg-blue-900 text-white text-sm font-medium px-4 py-1.5 rounded-md hover:bg-blue-800 transition duration-200">
+              SUSCOM-{conf.year}
+            </button>
+          </a>
         </div>
       ))}
     </div>

@@ -27,36 +27,6 @@ const Hero = () => {
 
         {/* Date */}
         <p className="text-lg font-bold text-gray-900 mb-4">June 26 - 27, 2025</p>
-
-        {/* Sponsors */}
-        <p className="text-sm text-gray-700">Sponsored by</p>
-        <p className="text-lg font-semibold text-gray-800">Department of Science & Innovation</p>
-        <p className="text-lg font-semibold text-gray-800 mb-4">
-          Engineering and Research Council, UK
-        </p>
-
-        {/* Partners Section */}
-        <div className="grid grid-cols-2 gap-6 mt-2 w-full max-w-md">
-          {/* Publication Partner */}
-          <div className="flex flex-col items-center">
-            <img src={Scopus} alt="Springer" className="h-14 object-contain mb-1" />
-            <p className="text-sm font-bold text-gray-700 uppercase">Publication Partner</p>
-          </div>
-
-          {/* Proceedings Publication */}
-          <div className="flex flex-col items-center">
-            <img src={Journal} alt="Proceedings Publication" className="h-14 object-contain mb-1" />
-            <p className="text-sm font-bold text-gray-700 uppercase">Proceedings Publication</p>
-          </div>
-        </div>
-
-        {/* Academic Partners */}
-        <div className="mt-6">
-          <p className="text-sm font-bold text-gray-700 uppercase mb-2">Academic Partners</p>
-          <div className="flex justify-center">
-            <img src={Scopus} alt="Academic Partner 1" className="h-12 object-contain" />
-          </div>
-        </div>
       </div>
     </div>
   );

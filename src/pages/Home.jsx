@@ -29,42 +29,37 @@ const Home = () => {
           sustainable computing.
         </p>
       </div>
-    {/* Third section */}
-    <div className="max-w-5xl mx-auto py-12 px-6">
-      {/* Paper Submissions Section */}
-      <h2 className="text-3xl font-bold text-gray-900">
-        Paper <span className="text-blue-900">Submissions</span>
-      </h2>
-      <div className="w-20 border-b-4 border-blue-900 my-2"></div>
-      <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded hover:bg-blue-800 transition">
-        Submit Your Paper
-      </button>
-
-      {/* Doctoral Symposium Section */}
-      <div className="mt-12">
-        <h2 className="text-3xl font-bold text-black">
-          Doctoral <span className="text-blue-900">Symposium</span>
-        </h2>
-        <div className="w-20 border-b-4 border-blue-900 my-2"></div>
-        <p className="text-gray-700 text-justify mt-4">
-          The SUSCOM-2025 will organize a one-day pre-conference doctoral symposium.
-        </p>
-        <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded hover:bg-blue-800 transition">
-          Submit Your Paper
-        </button>
-      </div>
-
-      {/* Paper Publications Section */}
-      <div className="mt-12">
+      {/* Third section */}
+      <div className="max-w-5xl mx-auto py-12 px-6">
+        {/* Paper Submissions Section */}
         <h2 className="text-3xl font-bold text-gray-900">
-          Paper <span className="text-blue-900">Publications</span>
+          Paper <span className="text-blue-900">Submissions</span>
         </h2>
         <div className="w-20 border-b-4 border-blue-900 my-2"></div>
-        <p className="text-gray-700 text-justify mt-4">
-          The papers will be peer-reviewed, and only accepted and registered papers will be considered for presentation during the conference. The SUSCOM-2025 Special Issues will be published in SCOPUS/WoS indexed journals.
-        </p>
+        <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded hover:bg-blue-800 transition">Submit Your Paper</button>
+
+        {/* Doctoral Symposium Section */}
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-black">
+            Doctoral <span className="text-blue-900">Symposium</span>
+          </h2>
+          <div className="w-20 border-b-4 border-blue-900 my-2"></div>
+          <p className="text-gray-700 text-justify mt-4">The SUSCOM-2025 will organize a one-day pre-conference doctoral symposium.</p>
+          <button className="bg-blue-900 text-white px-6 py-2 mt-4 rounded hover:bg-blue-800 transition">Submit Your Paper</button>
+        </div>
+
+        {/* Paper Publications Section */}
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-gray-900">
+            Paper <span className="text-blue-900">Publications</span>
+          </h2>
+          <div className="w-20 border-b-4 border-blue-900 my-2"></div>
+          <p className="text-gray-700 text-justify mt-4">
+            The papers will be peer-reviewed, and only accepted and registered papers will be considered for presentation during the conference. The
+            SUSCOM-2025 Special Issues will be published in SCOPUS/WoS indexed journals.
+          </p>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
-import React from "react";
-import { Linkedin, GraduationCap } from "lucide-react"; 
+import React, { useState } from "react";
+import { Linkedin, GraduationCap } from "lucide-react";
 import DrMohammadSKhan from "../assets/images/DrMohammadSKhan.png";
 import ProfDrMarioJoseDivan from "../assets/images/ProfDrMarioJoseDivan.png";
 
@@ -33,6 +33,12 @@ const speakers = [
 ];
 
 const Speaker = () => {
+  const [expanded, setExpanded] = useState({});
+
+  const toggleReadMore = (index) => {
+    setExpanded((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
+
   return (
     <div className="container mx-auto py-10 px-52 pt-[100px]">
       <p className="text-4xl font-bold text-blue-900 text-center">Keynote/Guest Speakers</p>
@@ -40,38 +46,34 @@ const Speaker = () => {
       <div className="grid md:grid-rows-1 gap-6">
         {speakers.map((speaker, index) => (
           <div key={index} className="flex flex-col md:flex-row items-start space-x-4 border-b pb-4">
-            {/* Fixed width div for image */}
-            <div className="w-52 flex justify-center">
-              <img
-                src={speaker.image}
-                alt={speaker.name}
-                className="h-auto w-auto rounded-md shadow-sm"
-              />
+            {/* Image */}
+            <div className="w-36 flex justify-center">
+              <img src={speaker.image} alt={speaker.name} className="h-auto w-auto rounded-md shadow-sm" />
             </div>
             {/* Speaker details */}
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-blue-800">{speaker.name}</h3>
               <p className="text-gray-700 text-sm">{speaker.title}</p>
               <p className="text-gray-500 text-xs">{speaker.affiliation}</p>
-              {speaker.description && (
-                <p className="mt-2 text-gray-600 text-sm">{speaker.description}</p>
-              )}
+              
+              {/* Description with Read More */}
+              <p className="mt-2 text-gray-600 text-sm">
+                {expanded[index] ? speaker.description : `${speaker.description.substring(0, 150)}...`}  
+                <button
+                onClick={() => toggleReadMore(index)}
+                className="text-blue-700 hover:underline text-sm font-medium mt-1"
+              >
+                {expanded[index] ? "Read Less" : "Read More"}
+              </button>
+              </p>
+
+
               {/* Icons for LinkedIn and Google Scholar */}
               <div className="mt-2 flex space-x-3">
-                <a
-                  href={speaker.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-700 hover:text-blue-900 transition duration-200"
-                >
+                <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-700 hover:text-blue-900 transition duration-200">
                   <Linkedin size={20} />
                 </a>
-                <a
-                  href={speaker.scholar}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-gray-900 transition duration-200"
-                >
+                <a href={speaker.scholar} target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-900 transition duration-200">
                   <GraduationCap size={20} />
                 </a>
               </div>
@@ -79,12 +81,9 @@ const Speaker = () => {
           </div>
         ))}
       </div>
-      <div>
-        <p className="mt-8 text-blue-900 text-lg font-semibold text-center">Keep checking for updates. . .</p>
-      </div>
+      <p className="mt-8 text-blue-900 text-lg font-semibold text-center">Keep checking for updates. . .</p>
     </div>
   );
 };
-
 
 export default Speaker;
